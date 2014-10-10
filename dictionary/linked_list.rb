@@ -1,6 +1,5 @@
 module Dictionary
   class LinkedList
-
     def insert(key, value)
       @head = Node.new(key, value, @head)
     end
@@ -44,14 +43,6 @@ module Dictionary
       str.chomp(", ") + "}"
     end
 
-    class Node
-      attr_accessor :key, :value, :link
-
-      def initialize(key, value, link)
-        @key = key
-        @value = value
-        @link = link
-      end
-    end
+    Node = Struct.new(:key, :value, :link)
   end
 end
