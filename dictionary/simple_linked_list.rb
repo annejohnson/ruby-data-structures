@@ -1,5 +1,5 @@
 module Dictionary
-  class LinkedList
+  class SimpleLinkedList
     def insert(key, value)
       @head = Node.new(key, value, @head)
     end
