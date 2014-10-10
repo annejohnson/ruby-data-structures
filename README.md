@@ -16,4 +16,4 @@ For practice and for brain candy.
     - Binary search tree
     - Splay tree
     - 2-3 tree
-- Test cases for all data structures
+- And more!
