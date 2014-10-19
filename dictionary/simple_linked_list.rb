@@ -37,7 +37,7 @@ module Dictionary
       str = "{"
       curr = @head
       while !curr.nil?
-        str += ":#{curr.key.to_sym} => #{curr.value}, "
+        str += ":#{curr.key} => #{curr.value}, "
         curr = curr.link
       end
       str.chomp(", ") + "}"
