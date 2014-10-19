@@ -103,7 +103,6 @@ module Dictionary
 	elsif key < node.left_child.key
 	  node.left_child.left_child = splay(key, node.left_child.left_child)
 	  node.left_child = rotate_right(node.left_child)
-	  return rotate_right(node)
 	elsif key > node.left_child.key
 	  node.left_child.right_child = splay(key, node.left_child.right_child)
 	  node.left_child = rotate_left(node.left_child)
@@ -115,7 +114,6 @@ module Dictionary
 	elsif key > node.right_child.key
 	  node.right_child.right_child = splay(key, node.right_child.right_child)
 	  node.right_child = rotate_left(node.right_child)
-	  return rotate_left(node)
 	elsif key < node.right_child.key
 	  node.right_child.left_child = splay(key, node.right_child.left_child)
 	  node.right_child = rotate_right(node.right_child)
