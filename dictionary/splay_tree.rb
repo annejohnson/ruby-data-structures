@@ -2,8 +2,8 @@ module Dictionary
   class SplayTree
     attr_reader :size
 
-    def initialize(root = nil)
-      @root, @size = root, 0
+    def initialize
+      @root, @size = nil, 0
     end
     
     def insert(key, value)
