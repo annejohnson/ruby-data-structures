@@ -57,7 +57,7 @@ module Dictionary
 
     class Node < Struct.new(:key, :value, :left_child, :right_child) 
       def to_s
-        " [#{key.to_s}: #{value.to_s}] " 
+        " [#{key}: #{value}] " 
       end
     end
 
