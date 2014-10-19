@@ -1,6 +1,6 @@
 module Dictionary
   class SplayTree
-    attr_reader :size, :root
+    attr_reader :size
 
     def initialize(root = nil)
       @root, @size = root, 0
@@ -166,7 +166,6 @@ module Dictionary
       str += inorder(node.left_child)
       str += node.to_s
       str += inorder(node.right_child)
-      str
     end
   end
 end

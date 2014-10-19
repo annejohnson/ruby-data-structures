@@ -150,7 +150,6 @@ module Dictionary
       str += inorder(node.left_child)
       str += node.to_s
       str += inorder(node.right_child)
-      str
     end
   end
 end
