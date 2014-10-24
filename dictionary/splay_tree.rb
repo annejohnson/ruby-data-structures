@@ -8,19 +8,16 @@ module Dictionary
     
     def insert(key, value)
       @root = splay(key, @root)
+      return nil if @root && @root.key == key
+      @size += 1
       if @root.nil?
         @root = Node.new(key, value)
-	@size += 1
-      end
-      return nil if @root.key == key
-      if key > @root.key
+      elsif key > @root.key
         @root = Node.new(key, value, @root, @root.right_child)
 	@root.left_child.right_child = nil
-	@size += 1
       else
         @root = Node.new(key, value, @root.left_child, @root)
 	@root.right_child.left_child = nil
-	@size += 1
       end
     end
 
