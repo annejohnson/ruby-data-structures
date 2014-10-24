@@ -1,6 +1,7 @@
 module Dictionary
   class SplayTree
     attr_reader :size
+    POS_INF = 10000000000000
 
     def initialize
       @root, @size = nil, 0
@@ -26,7 +27,7 @@ module Dictionary
       return nil unless @root && @root.key == key
       elem = @root.value
       @size -= 1
-      @root.left_child = splay(10000000000000, @root.left_child)
+      @root.left_child = splay(POS_INF, @root.left_child)
       if @root.left_child
         @root.left_child.right_child = @root.right_child
 	@root = @root.left_child
